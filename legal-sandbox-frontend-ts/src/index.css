@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --panel: theme(colors.surface);
+    --border: theme(colors.border);
+  }
+  ::selection { background: #2a2b33; color: white; }
+  html, body, #root { height: 100%; }
+}
+
+@layer components {
+  .card { @apply bg-surface border border-border rounded-2xl shadow-soft; }
+  .btn  { @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold border border-border bg-surface hover:bg-[#1b1c22] transition; }
+  .btn-primary { @apply bg-accent text-white border-transparent hover:opacity-90; }
+  .tag { @apply px-2.5 py-0.5 rounded-lg text-xs font-medium border border-border; }
+  .input { @apply w-full bg-surface border border-border rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-accent; }
+  .section-title { @apply text-xl font-semibold mb-2; }
+  .muted { @apply text-muted; }
+  .scroll-thin { scrollbar-width: thin; }
+}
+
+.highlight { background: rgba(91,140,255,0.2); outline: 1px dashed #5b8cff; }
